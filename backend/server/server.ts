@@ -1,8 +1,18 @@
+import { NextFunction, Request, Response } from "express";
 import app from "../app/app";
-const port = process.env.PORT || '3000';
+const port = process.env.PORT || "3000";
 
 class Server {
-  constructor() {}
+  constructor() {
+    this.errorHandler();
+    this.startServer();
+  }
+
+  private errorHandler() {
+    app.use((error: Error, req: Request, res: Response, next: NextFunction) => {
+      console.error(error)
+    });
+  }
 
   startServer() {
     app.listen(port, () => {
@@ -11,4 +21,4 @@ class Server {
   }
 }
 
-new Server().startServer()
+new Server();
