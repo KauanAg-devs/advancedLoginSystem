@@ -1,0 +1,6 @@
+envFiles/.env.dev
+envFiles/.env.prod
+
+dist/
+node_modules/
+

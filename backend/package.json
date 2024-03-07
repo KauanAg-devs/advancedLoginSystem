@@ -1,0 +1,25 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc --watch",
+    "start": "nodemon --env-file ./envFiles/.env.dev dist/server/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.3",
+    "helmet": "^7.1.0",
+    "mongoose": "^8.2.1"
+    },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/helmet": "^4.0.0",
+    "typescript": "^5.4.2"
+  }
+}
